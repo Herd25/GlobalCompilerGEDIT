@@ -25,17 +25,17 @@ Compilador de código Multi-Lenguaje compila tus programas y convierte a GEDIT e
 
 > ***Te cito a que me hagas una pregunta si tienes alguna duda comentamela en cualquiera de estos enlaces ![](https://lh4.googleusercontent.com/proxy/ZPqXWRhbOdcABrh728ZxmdYd_y20K4JYrklFuseWdBbufLHShQ_IHyyeWc4ov6HhwAjcV_sqmS0KIVK9SE2tjJDI4lwlxEE=w1200-h630-p-k-no-nu)***
     >- Sigueme y enviame tus mensajes a mis redes ![](https://lh5.googleusercontent.com/proxy/5I8eThwSymjdI7VzDkMf4JRxf0fVrmcb-TNwKONpSsrwzou24czXRc_lpHAVig6Bgiz_FOb3tCuZNM-tfBNVuoVs-cIpdfysj3_XWNpF_yd0ZgU8TIhk7D1qbcd_GHYzOXGaq89KLs4uL9bEAChqdfNnG9NEGia2cYFMeL-xqbawG_BWWx1-XQ=w1200-h630-p-k-no-nu)
-                    * ![](https://s.yimg.com/ny/api/res/1.2/cgwLmAiz8hMvhmG3wb9ldg--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAwO2lsPXBsYW5l/https://big.assets.huffingtonpost.com/FBLOGO_0.png.cf.jpg) ![FACEBOOK](https://www.facebook.com/DesignPrograming/)
-                    * ![](https://addons.thunderbird.net/user-media/addon_icons/244/244899-64.png?modified=1319322775) ![TWITTER](https://twitter.com/DesignProgramin)
-                    * ![](https://creditwritedowns.com/wp-content/uploads/2010/06/feed-icon16x16.png) ![PATREON](https://www.patreon.com/DesignPrograming)
+                    * ![](https://s.yimg.com/ny/api/res/1.2/cgwLmAiz8hMvhmG3wb9ldg--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAwO2lsPXBsYW5l/https://big.assets.huffingtonpost.com/FBLOGO_0.png.cf.jpg) [FACEBOOK](https://www.facebook.com/DesignPrograming/)
+                    * ![](https://addons.thunderbird.net/user-media/addon_icons/244/244899-64.png?modified=1319322775) [TWITTER](https://twitter.com/DesignProgramin)
+                    * ![](https://creditwritedowns.com/wp-content/uploads/2010/06/feed-icon16x16.png) [PATREON](https://www.patreon.com/DesignPrograming)
     >- Tambien puedes visitar mi canal y ver cunado subo mejoras y actualizaciones al compilador...
-                    * ![](http://www.youtube.com/favicon.ico) ![Youtube](https://www.youtube.com/c/DesignPrograming)
+                    * ![](http://www.youtube.com/favicon.ico) [Youtube](https://www.youtube.com/c/DesignPrograming)
     >- Quieres ayudarme con alguna donacion o quieres que beba un refresco puedes acerlo en los siguientes enlaces
-        *![](https://pro-obmen.ru/img/entity/currency_icon_34.png) ![PAYPAL](https://www.paypal.me/DesignPrograming)
-        * ![](https://creditwritedowns.com/wp-content/uploads/2010/06/feed-icon16x16.png) ![PATREON](https://www.patreon.com/DesignPrograming)
+        *![](https://pro-obmen.ru/img/entity/currency_icon_34.png) [PAYPAL](https://www.paypal.me/DesignPrograming)
+        * ![](https://creditwritedowns.com/wp-content/uploads/2010/06/feed-icon16x16.png) [PATREON](https://www.patreon.com/DesignPrograming)
 
-> Comparte con todos si deseas que esta herramienta se de a conocer 
-        **© 2019 ![Design&Programing](https://www.youtube.com/c/DesignPrograming) ~ _GEDITGLOBALCOMPILER._**
+> Comparte con todos si deseas que esta herramienta se de a conocer
+        **© 2019 [Design&Programing](https://www.youtube.com/c/DesignPrograming) ~ _GEDITGLOBALCOMPILER._**
 
 ![us](http://www.raymarine.com/uploadedImages/lang_uk.gif)
 
@@ -63,14 +63,14 @@ Multilanguage code compiler compiles your programs and converts GEDIT into your 
 
 > ***I would like you to ask me a question if you have any questions comment on any of these links ![](https://lh4.googleusercontent.com/proxy/ZPqXWRhbOdcABrh728ZxmdYd_y20K4JYrklFuseWdBbufLHShQ_IHyyeWc4ov6HhwAjcV_sqmS0KIVK9SE2tjJDI4lwlxEE=w1200-h630-p-k-no-nu)***
     >- Follow me and send me your messages to my networks ![](https://lh5.googleusercontent.com/proxy/5I8eThwSymjdI7VzDkMf4JRxf0fVrmcb-TNwKONpSsrwzou24czXRc_lpHAVig6Bgiz_FOb3tCuZNM-tfBNVuoVs-cIpdfysj3_XWNpF_yd0ZgU8TIhk7D1qbcd_GHYzOXGaq89KLs4uL9bEAChqdfNnG9NEGia2cYFMeL-xqbawG_BWWx1-XQ=w1200-h630-p-k-no-nu)
-                    * ![](https://s.yimg.com/ny/api/res/1.2/cgwLmAiz8hMvhmG3wb9ldg--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAwO2lsPXBsYW5l/https://big.assets.huffingtonpost.com/FBLOGO_0.png.cf.jpg) ![FACEBOOK](https://www.facebook.com/DesignPrograming/)
-                    * ![](https://addons.thunderbird.net/user-media/addon_icons/244/244899-64.png?modified=1319322775) ![TWITTER](https://twitter.com/DesignProgramin)
-                    * ![](https://creditwritedowns.com/wp-content/uploads/2010/06/feed-icon16x16.png) ![PATREON](https://www.patreon.com/DesignPrograming)
+                    * ![](https://s.yimg.com/ny/api/res/1.2/cgwLmAiz8hMvhmG3wb9ldg--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAwO2lsPXBsYW5l/https://big.assets.huffingtonpost.com/FBLOGO_0.png.cf.jpg) [FACEBOOK](https://www.facebook.com/DesignPrograming/)
+                    * ![](https://addons.thunderbird.net/user-media/addon_icons/244/244899-64.png?modified=1319322775) [TWITTER](https://twitter.com/DesignProgramin)
+                    * ![](https://creditwritedowns.com/wp-content/uploads/2010/06/feed-icon16x16.png) [PATREON](https://www.patreon.com/DesignPrograming)
     >- You can also visit my channel and see when I upload improvements and updates to the compiler ...
-                    * ![](http://www.youtube.com/favicon.ico) ![Youtube](https://www.youtube.com/c/DesignPrograming)
+                    * ![](http://www.youtube.com/favicon.ico) [Youtube](https://www.youtube.com/c/DesignPrograming)
     >- You want to help me with a donation or do you want me to drink a soda? You can download it in the following links
-        *![](https://pro-obmen.ru/img/entity/currency_icon_34.png) ![PAYPAL](https://www.paypal.me/DesignPrograming)
-        * ![](https://creditwritedowns.com/wp-content/uploads/2010/06/feed-icon16x16.png) ![PATREON](https://www.patreon.com/DesignPrograming)
+        *![](https://pro-obmen.ru/img/entity/currency_icon_34.png) [PAYPAL](https://www.paypal.me/DesignPrograming)
+        * ![](https://creditwritedowns.com/wp-content/uploads/2010/06/feed-icon16x16.png) [PATREON](https://www.patreon.com/DesignPrograming)
 
 > Share with everyone if you want this tool to be known
-        **© 2019 ![Design&Programing](https://www.youtube.com/c/DesignPrograming) ~ _GEDITGLOBALCOMPILER._**
+        **© 2019 [Design&Programing](https://www.youtube.com/c/DesignPrograming) ~ _GEDITGLOBALCOMPILER._**

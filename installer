@@ -35,6 +35,7 @@ while [ $Inicio ]; do
 	echo "Progreso ...."
 	if [ -d $HOME/.config/gedit/tools/ ]
 		then
+		cd /GLOBALCOMPILER/
 		cp shell.sh -rf $HOME/.config/gedit/tools/UNICompilerDesignPrograming | pv
 		if [ -f $HOME/.config/gedit/tools/UNICompilerDesignPrograming ]
 			then
