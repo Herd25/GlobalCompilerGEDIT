@@ -3,7 +3,7 @@
 ![es](https://dd-cdn.multiscreensite.com/flags/flags_iso/32/es.png)
 
 
-Compilador de código Multi-Lenguaje compila tus programas y convierte a GEDIT en tu IDE de desarrollo favorito
+Compilador de código Multi-Lenguaje compila tus programas y convierte a GEDIT en tu IDE de desarrollo favorito..
 
 - Este compilador actualmentese encuentra en fase de desarrollo la version que encontraras a continuacion es la version ***Version 0.0.1***
 > - Actualmente los lenguajes que soporta son los siguientes:
