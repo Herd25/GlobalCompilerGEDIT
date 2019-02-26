@@ -34,21 +34,90 @@ name=$GEDIT_CURRENT_DOCUMENT_NAME
 
 path=$GEDIT_CURRENT_DOCUMENT_PATH
 
+out="out"
+
 cd "$dir"
 
 # echo "${type}"
-# echo "${name}"
+# echo "$name"
 # echo "${path}"
 # echo "${dir}"
 
+# MANAGER FUNCTIONS
+
+execute_terminal_C() {
+	cd $1
+
+	case $5 in
+		/usr/bin/gnome-session*)
+			gnome-terminal --title="Run Code C" --working-directory="$1" --command="bash"
+			--tab --command="cc -o $2 $3 $4" --tab --command="./$2" --tab --command="Termino.. la ejecucion"
+		;;
+		/usr/bin/xfce4-session*)
+			xfce4-terminal --title="Run Code C" --working-directory="$1"
+			--command="bash" --tab --command="cc -o $2 $3 $4" --tab --command="./$2" --tab --command="Termino.. la ejecucion"
+		;;
+		/usr/bin/mate-session*)
+			mate-terminal --title="Run Code C" --working-directory="$1"
+			--command="bash" --tab --command="cc -o $2 $3 $4" --tab --command="./$2" --tab --command="Termino.. la ejecucion"
+		;;
+	esac
+}
+
+
+execute_code_c() {
+	cd $1
+	cc -c $2
+	cc -o $3 $2
+	echo "Run C Code"
+	./$3
+	$SHELL
+	echo " "
+	echo "Termino la ejecucion"
+	rm -rf *.o
+}
+
+execute_terminal_CPP() {
+	cd $1
+
+	case $5 in
+		/usr/bin/gnome-session*)
+			gnome-terminal --title="Run Code CPP" --working-directory="$1" --command="bash"
+			--tab --command="g++ -o $2 $3 $4" --tab --command="./$2" --tab --command="Termino.. la ejecucion"
+		;;
+		/usr/bin/xfce4-session*)
+			xfce4-terminal --title="Run Code CPP" --working-directory="$1"
+			--command="bash" --tab --command="g++ -o $2 $3 $4" --tab --command="./$2" --tab --command="Termino.. la ejecucion"
+		;;
+		/usr/bin/mate-session*)
+			mate-terminal --title="Run Code CPP" --working-directory="$1"
+			--command="bash" --tab --command="g++ -o $2 $3 $4" --tab --command="./$2" --tab --command="Termino.. la ejecucion"
+		;;
+	esac
+}
+
+execute_code_CPP() {
+	cd $1
+	g++ -c $2
+	g++ -o $3 $2
+	echo "Run CPP Code"
+	./$3
+	$SHELL
+	echo " "
+	echo "Termino la ejecucion"
+	rm -rf *.o
+}
+
+
+# RUNNING MODULES
 
 case ${type} in
 	text/x-java)
-		zenity --question --window-icon="icon/compiler_icon.png" --title="Compilacion de JAVA" --text="Desea correr el programa ${name}" --ok-label="SI" --cancel-label="NO"
+		zenity --question --window-icon="icon/compiler_icon.png" --title="Compilacion de JAVA" --text="Desea correr el programa $name" --ok-label="SI" --cancel-label="NO"
 		if [ $? == 0 ]; then
 			echo "RUN JAVA CODE"
 			cd "$dir"
-			java ${name}
+			java $name
 			$SHELL
 			echo "\n"
 			echo "terminado..."
@@ -63,40 +132,27 @@ case ${type} in
 		if [ $? == 0 ]; then
 			file=$(zenity --entry --text="Introduce el nombre")
 			if [ -z $file ]; then
-				zenity --warning --window-icon="icon/compiler_icon.png" --text="No se ha seleccionado llenado el campo se pondra out por defecto"
+				zenity --warning --window-icon="icon/compiler_icon.png" --text="No se ha seleccionado llenado el campo se pondra $out por defecto"
 				zenity --question --window-icon="icon/compiler_icon.png" --title="Añadir Flags al compilador" --text="SU FICHERO NECESITA ALGUN ADICIONAL" --ok-label="SI" --cancel-label="NO"
 				if [ $? == 0 ]; then
 					flags=$(zenity --entry --title="Añadiendo flags al compilador" --text="introduce los flasgs necesarios para compilar")
 					if [ -z $flags ]; then
 						zenity --warning --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="No hay flags"
-						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar ${name} " --ok-label="SI" --cancel-label="NO"
+						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $name " --ok-label="SI" --cancel-label="NO"
 						if [ $? == 0 ]; then
-						    cd "$dir"
-							g++ -c ${name}
-							g++ -o out ${name}
-							echo "RUN C++ CODE"
-							./out
-							$SHELL
-							echo " "
-							echo "terminado"
-							rm -rf *.o
+							execute_code_CPP $dir $name $out
+							
 						else
 							zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 							rm -rf *.o
 							break
 						fi
 					else
-						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar ${name}  con los $flags ?" --ok-label="SI" --cancel-label="NO"
+						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $name  con los $flags ?" --ok-label="SI" --cancel-label="NO"
 						if [ $? == 0 ]; then
-						    cd "$dir"
-							#g++ -c ${name} ${flags}
-							g++ -o out ${name} ${flags}
-							echo "RUN C++ CODE"
-							./out
-							echo " "
-							$SHELL
-							echo "terminado"
-							rm -rf *.o
+							session=$(ls /usr/bin/*session*)
+							execute_terminal_CPP  $dir $out $name $flags $session
+							
 						else
 							zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 							rm -rf *.o
@@ -104,17 +160,10 @@ case ${type} in
 						fi
 					fi
 				else
-					zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar ${name} ?" --ok-label="SI" --cancel-label="NO"
+					zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $name ?" --ok-label="SI" --cancel-label="NO"
 					if [ $? == 0 ]; then
-					    cd "$dir"
-						g++ -c ${name}
-						g++ -o out ${name}
-						echo "RUN C++ CODE"
-						./out
-						$SHELL
-						echo " "
-						echo "terminado"
-						rm -rf *.o
+						execute_code_CPP $dir $name $out
+						
 					else
 						zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 						rm -rf *.o
@@ -131,15 +180,8 @@ case ${type} in
 							zenity --warning --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="No hay flags"
 							zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $file " --ok-label="SI" --cancel-label="NO"
 								if [ $? == 0 ]; then
-								    cd "$dir"
-									g++ -c ${name}
-									g++ -o $file ${name}
-									echo "RUN C++ CODE"
-									./$file
-									$SHELL
-									echo " "
-									echo "terminado"
-									rm -rf *.o
+									execute_code_CPP $dir $name $file
+									
 								else
 									zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 									rm -rf *.o
@@ -148,15 +190,9 @@ case ${type} in
 						else
 							zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $file con los $flags ?" --ok-label="SI" --cancel-label="NO"
 							if [ $? == 0 ]; then
-							    cd "$dir"
-								#g++ -c ${name} ${flags}
-								g++ -o $file ${name} ${flags}
-								echo "RUN C++ CODE"
-								./$file
-								$SHELL
-								echo " "
-								echo "terminado"
-								rm -rf *.o
+								session=$(ls /usr/bin/*session*)
+								execute_terminal_CPP $dir $file $name $flags $session
+								
 							else
 								zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 								rm -rf *.o
@@ -166,15 +202,8 @@ case ${type} in
 					else
 						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $file ?" --ok-label="SI" --cancel-label="NO"
 						if [ $? == 0 ]; then
-						    cd "$dir"
-							g++ -c ${name}
-							g++ -o $file ${name}
-							echo "RUN C++ CODE"
-							./$file
-							$SHELL
-							echo " "
-							echo "terminado"
-							rm -rf *.o
+							execute_code_CPP $dir $name $file
+							
 						else
 							zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 							rm -rf *.o
@@ -198,40 +227,28 @@ case ${type} in
 		if [ $? == 0 ]; then
 			file=$(zenity --entry --text="Introduce el nombre")
 			if [ -z $file ]; then
-				zenity --warning --window-icon="icon/compiler_icon.png" --text="No se ha seleccionado llenado el campo se pondra out por defecto"
+				zenity --warning --window-icon="icon/compiler_icon.png" --text="No se ha seleccionado llenado el campo se pondra $out por defecto"
 				zenity --question --window-icon="icon/compiler_icon.png" --title="Añadir Flags al compilador" --text="SU FICHERO NECESITA ALGUN ADICIONAL" --ok-label="SI" --cancel-label="NO"
 				if [ $? == 0 ]; then
 					flags=$(zenity --entry --title="Añadiendo flags al compilador" --text="introduce los flasgs necesarios para compilar")
 					if [ -z $flags ]; then
 						zenity --warning --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="No hay flags"
-						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar ${name} " --ok-label="SI" --cancel-label="NO"
+						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $name " --ok-label="SI" --cancel-label="NO"
 						if [ $? == 0 ]; then
-						    cd "$dir"
-							cc -c ${name}
-							cc -o out ${name}
-							echo "RUN C CODE"
-							./out
-							$SHELL
-							echo " "
-							echo "terminado"
-							rm -rf *.o
+							execute_code_c $dir $name $out
+							
 						else
 							zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 							rm -rf *.o
 							break
 						fi
 					else
-						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar ${name}  con los $flags ?" --ok-label="SI" --cancel-label="NO"
+						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $name  con los $flags ?" --ok-label="SI" --cancel-label="NO"
 						if [ $? == 0 ]; then
-						    cd "$dir"
-							#cc -c ${name} ${flags}
-							cc -o out ${name} ${flags}
-							echo "RUN C CODE"
-							./out
-							$SHELL
-							echo " "
-							echo "terminado"
-							rm -rf *.o
+							session=$(ls /usr/bin/*session*)
+							echo ${session}
+							execute_terminal_C  $dir $out $name $flags $session
+							
 						else
 							zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 							rm -rf *.o
@@ -239,17 +256,10 @@ case ${type} in
 						fi
 					fi
 				else
-					zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar ${name} ?" --ok-label="SI" --cancel-label="NO"
+					zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $name ?" --ok-label="SI" --cancel-label="NO"
 					if [ $? == 0 ]; then
-					    cd "$dir"
-						cc -c ${name}
-						cc -o out ${name}
-						echo "RUN C CODE"
-						./out
-						$SHELL
-						echo " "
-						echo "terminado"
-						rm -rf *.o
+						execute_code_c $dir $name $out
+						
 					else
 						zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 						rm -rf *.o
@@ -266,15 +276,8 @@ case ${type} in
 							zenity --warning --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="No hay flags"
 							zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $file " --ok-label="SI" --cancel-label="NO"
 							if [ $? == 0 ]; then
-							    cd "$dir"
-								cc -c ${name}
-								cc -o $file ${name}
-								echo "RUN C CODE"
-								./$file
-								$SHELL
-								echo " "
-								echo "terminado"
-								rm -rf *.o
+								execute_code_c $dir $name $file
+								
 							else
 								zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 								rm -rf *.o
@@ -283,15 +286,10 @@ case ${type} in
 						else
 							zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $file  con los $flags ?" --ok-label="SI" --cancel-label="NO"
 							if [ $? == 0 ]; then
-							    cd "$dir"
-								#cc -c ${name} ${flags}
-								cc -o $file ${name} ${flags}
-								echo "RUN C CODE"
-								./$file
-								$SHELL
-								echo " "
-								echo "terminado"
-								rm -rf *.o
+								session=$(ls /usr/bin/*session*)
+								echo ${session}
+								execute_terminal_C $dir $file $name $flags $session
+								
 							else
 								zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 								rm -rf *.o
@@ -301,15 +299,8 @@ case ${type} in
 					else
 						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $file ?" --ok-label="SI" --cancel-label="NO"
 						if [ $? == 0 ]; then
-						    cd "$dir"
-							cc -c ${name}
-							cc -o $file ${name}
-							echo "RUN C CODE"
-							./$file
-							$SHELL
-							echo " "
-							echo "terminado"
-							rm -rf *.o
+							execute_code_c $dir $name $file
+							
 						else
 							zenity --warning --window-icon="icon/compiler_icon.png" --title="ADIOS" --text="Saliendo"
 							rm -rf *.o
@@ -327,11 +318,11 @@ case ${type} in
 		fi
 	;;
 	text/x-python)
-		zenity --question --window-icon="icon/compiler_icon.png" --title="Ejecucion de Python 2" --text="Deseas ejecutar el script ${name}" --ok-label="SI" --cancel-label="NO"
+		zenity --question --window-icon="icon/compiler_icon.png" --title="Ejecucion de Python 2" --text="Deseas ejecutar el script $name" --ok-label="SI" --cancel-label="NO"
 		if [ $? == 0 ]; then
 			echo "RUN PYTHON SCRIPT"
 			cd "$dir"
-			python2 ${name}
+			python2 $name
 			echo "\n"
 			echo "terminado"
 		else
@@ -340,11 +331,11 @@ case ${type} in
 		fi
 	;;
 	text/x-python3)
-		zenity --question --window-icon="icon/compiler_icon.png" --title="Ejecucion de Python 3" --text="Deseas ejecutar el script ${name}" --ok-label="SI" --cancel-label="NO"
+		zenity --question --window-icon="icon/compiler_icon.png" --title="Ejecucion de Python 3" --text="Deseas ejecutar el script $name" --ok-label="SI" --cancel-label="NO"
 		if [ $? == 0 ]; then
 			echo "RUN PYTHON3 SCRIPT"
 			cd "$dir"
-			python ${name}
+			python $name
 			echo "\n"
 			echo "terminado"
 		else
@@ -356,8 +347,8 @@ case ${type} in
 		zenity --question --window-icon="icon/compiler_icon.png" --title="Ejecucion de SHELLSCRIPT" --text="DESEA CORRER EL SCRIPT" --ok-label="SI" --cancel-label="NO"
 		if [ $? == 0 ]; then
 			echo "Running Shell script Code"
-			chmod +x ${name}
-			./${name}
+			chmod +x $name
+			./$name
 			$SHELL
 		else
 			zenity --warning --window-icon="icon/compiler_icon.png" --title="SALIENDO" --text="SALIENDO"
@@ -367,9 +358,9 @@ case ${type} in
 	text/html)
 		zenity --question --window-icon="icon/compiler_icon.png" --title="Ejecucion de HTML" --text="Que Navegador desea usar?" --ok-label="Firefox" --cancel-label="Chromium"
 		if [ $? == 0 ]; then
-			firefox ${name}
+			firefox $name
 		else
-			chromium ${name}
+			chromium $name
 		fi
 		break
 	;;
@@ -377,3 +368,4 @@ case ${type} in
 		zenity --warning --window-icon="icon/compiler_icon.png" --title="ALERTA" --text="DOCUMENTO NO SOPORTADO"
 	;;
 esac
+
