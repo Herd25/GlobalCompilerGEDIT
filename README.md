@@ -38,3 +38,39 @@ Compilador de código Multi-Lenguaje compila tus programas y convierte a GEDIT e
         **© 2019 ![Design&Programing](https://www.youtube.com/c/DesignPrograming) ~ _GEDITGLOBALCOMPILER._**
 
 ![us](http://www.raymarine.com/uploadedImages/lang_uk.gif)
+
+Multilanguage code compiler compiles your programs and converts GEDIT into your favorite development IDE ..
+
+- This compiler is currently in the development phase version you will find below is the version *** Version 0.0.1 ***
+
+
+> - Currently the languages ​​it supports are the following:
+    1. ![](http://gopaljite.com/images/favicon.ico) ***C***
+    2. ![](https://advisornews.com/wp-content/uploads/2018/08/favicon.png) ![](https://66.media.tumblr.com/tumblr_m2wj92vyEn1qfamg6.png) ***C++***
+    3. ![](https://a.fsdn.com/allura/p/app-builder/icon?1502824204?&w=90) ***Java***
+    4. ![](https://addons.thunderbird.net/user-media/addon_icons/11/11376-64.png?modified=1275585301) ***Python***
+    5. ![](https://addons.thunderbird.net/user-media/addon_icons/11/11376-64.png?modified=1275585301) ***Python3***
+    6. ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-nzPXnYnMYN49nGEG4yHMCy15qsOfLDxQ5rANcPWKqX1aRPl-zA) ***Bash Script***
+    6. ![](https://www.fabiocampana.com.br/wp-content/uploads/2012/09/html2.gif) ***HTML5***
+> - These are its characteristics:
+    * Compile in C / C ++ add additional flags to the compiler in case you need to compile special libraries compatible both
+    * Add specialized names to your C / C ++ files
+    or in case of not putting any will be put out by default
+    compile and execute the generated files will also be grouped the .o codes and will be eliminated
+> - Characteristics of interpreters for JAVA PYTHON2 / 3 and Shell Script
+    * The generated code will be compiled by the respective interpreter, confirming the compilation for the open file.
+    * The script is intelligent detects the type of nomenclature for Python2 / 3 detects when the syntax type is made and compiles it with the respective interpreter.
+
+> ***I would like you to ask me a question if you have any questions comment on any of these links ![](https://lh4.googleusercontent.com/proxy/ZPqXWRhbOdcABrh728ZxmdYd_y20K4JYrklFuseWdBbufLHShQ_IHyyeWc4ov6HhwAjcV_sqmS0KIVK9SE2tjJDI4lwlxEE=w1200-h630-p-k-no-nu)***
+    >- Follow me and send me your messages to my networks ![](https://lh5.googleusercontent.com/proxy/5I8eThwSymjdI7VzDkMf4JRxf0fVrmcb-TNwKONpSsrwzou24czXRc_lpHAVig6Bgiz_FOb3tCuZNM-tfBNVuoVs-cIpdfysj3_XWNpF_yd0ZgU8TIhk7D1qbcd_GHYzOXGaq89KLs4uL9bEAChqdfNnG9NEGia2cYFMeL-xqbawG_BWWx1-XQ=w1200-h630-p-k-no-nu)
+                    * ![](https://s.yimg.com/ny/api/res/1.2/cgwLmAiz8hMvhmG3wb9ldg--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAwO2lsPXBsYW5l/https://big.assets.huffingtonpost.com/FBLOGO_0.png.cf.jpg) ![FACEBOOK](https://www.facebook.com/DesignPrograming/)
+                    * ![](https://addons.thunderbird.net/user-media/addon_icons/244/244899-64.png?modified=1319322775) ![TWITTER](https://twitter.com/DesignProgramin)
+                    * ![](https://creditwritedowns.com/wp-content/uploads/2010/06/feed-icon16x16.png) ![PATREON](https://www.patreon.com/DesignPrograming)
+    >- You can also visit my channel and see when I upload improvements and updates to the compiler ...
+                    * ![](http://www.youtube.com/favicon.ico) ![Youtube](https://www.youtube.com/c/DesignPrograming)
+    >- You want to help me with a donation or do you want me to drink a soda? You can download it in the following links
+        *![](https://pro-obmen.ru/img/entity/currency_icon_34.png) ![PAYPAL](https://www.paypal.me/DesignPrograming)
+        * ![](https://creditwritedowns.com/wp-content/uploads/2010/06/feed-icon16x16.png) ![PATREON](https://www.patreon.com/DesignPrograming)
+
+> Share with everyone if you want this tool to be known
+        **© 2019 ![Design&Programing](https://www.youtube.com/c/DesignPrograming) ~ _GEDITGLOBALCOMPILER._**

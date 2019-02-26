@@ -1,0 +1,58 @@
+#!/bin/bash
+
+######################################
+######################################
+######                       #########
+####### UNIVERSAL COMPILER ###########
+######### FOR GEDIT BY ###############
+#### CREATED DESIGN&PROGRAMING #######
+######                       #########
+######################################
+######################################
+
+
+######################################
+######################################
+######                       #########
+### ESTE COMPILADOR FUE DISEÑADO #####
+##### EL PROPOSITO DE HACER A   ######
+##### GEDIT UN GRAN IDE QUE   ########
+##### COMPILE CODIGO DE SERIE ########
+######                       #########
+######################################
+######################################
+
+clear
+
+echo "HOLA REALIZANDO LA OPERACION"
+echo "NO OLVIDES COMPARTIR TU EXPERIENCIA"
+echo "Visitame en https://www.youtube.com/c/DesignPrograming"
+
+let Inicio=true
+let Termino=false
+
+while [ $Inicio ]; do
+	echo "Progreso ...."
+	if [ -d $HOME/.config/gedit/tools/ ]
+		then
+		cp shell.sh -rf $HOME/.config/gedit/tools/UNICompilerDesignPrograming | pv
+		if [ -f $HOME/.config/gedit/tools/UNICompilerDesignPrograming ]
+			then
+			echo "Terminado Buscar en Gestor de Herramientas Externas y pon un atajo para ejecutra"
+			echo "Cualquier duda puedes pregunatr en cualquiera de estos enlaces"
+			echo "https://www.youtube.com/c/DesignPrograming"
+			echo "https://www.facebook.com/DesignPrograming/"
+			echo "https://twitter.com/DesignProgramin"
+			echo "\n"
+			echo "Suerte ....."
+			break
+		fi
+	else
+		echo "NO existe el directorio necesitas instalar gedit..."
+		let Termino=true
+		if [ termino ]; then break; fi
+	fi
+	sleep 1
+done
+
+
