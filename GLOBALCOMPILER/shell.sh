@@ -64,7 +64,7 @@ case ${type} in
 				zenity --warning --window-icon="icon/compiler_icon.png" --text="No se ha seleccionado llenado el campo se pondra out por defecto"
 				zenity --question --window-icon="icon/compiler_icon.png" --title="Añadir Flags al compilador" --text="SU FICHERO NECESITA ALGUN ADICIONAL" --ok-label="SI" --cancel-label="NO"
 				if [ $? == 0 ]; then
-					flags=(zenity --entry --title="Añadiendo flags al compilador" --text="introduce los flasgs necesarios para compilar")
+					flags=$(zenity --entry --title="Añadiendo flags al compilador" --text="introduce los flasgs necesarios para compilar")
 					if [ -z $flags ]; then
 						zenity --warning --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="No hay flags"
 						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar ${name} " --ok-label="SI" --cancel-label="NO"
@@ -124,7 +124,7 @@ case ${type} in
 				if [ $? == 0 ]; then
 					zenity --question --window-icon="icon/compiler_icon.png" --title="Añadir Flags al compilador" --text="SU FICHERO NECESITA ALGUN ADICIONAL" --ok-label="SI" --cancel-label="NO"
 					if [ $? == 0 ]; then
-						flags=(zenity --entry --title="Añadiendo flags al compilador" --text="introduce los flasgs necesarios para compilar")
+						flags=$(zenity --entry --title="Añadiendo flags al compilador" --text="introduce los flasgs necesarios para compilar")
 						if [ -z $flags ]; then
 							zenity --warning --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="No hay flags"
 							zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $file " --ok-label="SI" --cancel-label="NO"
@@ -199,7 +199,7 @@ case ${type} in
 				zenity --warning --window-icon="icon/compiler_icon.png" --text="No se ha seleccionado llenado el campo se pondra out por defecto"
 				zenity --question --window-icon="icon/compiler_icon.png" --title="Añadir Flags al compilador" --text="SU FICHERO NECESITA ALGUN ADICIONAL" --ok-label="SI" --cancel-label="NO"
 				if [ $? == 0 ]; then
-					flags=(zenity --entry --title="Añadiendo flags al compilador" --text="introduce los flasgs necesarios para compilar")
+					flags=$(zenity --entry --title="Añadiendo flags al compilador" --text="introduce los flasgs necesarios para compilar")
 					if [ -z $flags ]; then
 						zenity --warning --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="No hay flags"
 						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar ${name} " --ok-label="SI" --cancel-label="NO"
@@ -259,7 +259,7 @@ case ${type} in
 				if [ $? == 0 ]; then
 					zenity --question --window-icon="icon/compiler_icon.png" --title="Añadir Flags al compilador" --text="SU FICHERO NECESITA ALGUN ADICIONAL" --ok-label="SI" --cancel-label="NO"
 					if [ $? == 0 ]; then
-						flags=(zenity --entry --title="Añadiendo flags al compilador" --text="introduce los flasgs necesarios para compilar")
+						flags=$(zenity --entry --title="Añadiendo flags al compilador" --text="introduce los flasgs necesarios para compilar")
 						if [ -z $flags ]; then
 							zenity --warning --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="No hay flags"
 							zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $file " --ok-label="SI" --cancel-label="NO"
