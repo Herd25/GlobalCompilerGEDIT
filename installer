@@ -35,8 +35,9 @@ while [ $Inicio ]; do
 	echo "Progreso ...."
 	if [ -d $HOME/.config/gedit/tools/ ]
 		then
-		cd /GLOBALCOMPILER/
+		cd GLOBALCOMPILER/
 		cp shell.sh -rf $HOME/.config/gedit/tools/UNICompilerDesignPrograming | pv
+		cp icon -rf $HOME/.config/gedit/tools/icon/ | pv
 		if [ -f $HOME/.config/gedit/tools/UNICompilerDesignPrograming ]
 			then
 			echo "Terminado Buscar en Gestor de Herramientas Externas y pon un atajo para ejecutra"
