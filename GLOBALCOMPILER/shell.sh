@@ -24,6 +24,8 @@
 
 clear
 
+bash
+
 dir=$GEDIT_CURRENT_DOCUMENT_DIR
 
 type=$GEDIT_CURRENT_DOCUMENT_TYPE
