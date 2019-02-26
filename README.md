@@ -1,4 +1,4 @@
-## GlobalCompilerGEDIT ![](https://imgur.com/a/AJsVIBL)  ![](https://imag.malavida.com/mvimgbig/download-s/gedit-7071-0.jpg)
+## GlobalCompilerGEDIT ![](https://scontent.fgye1-1.fna.fbcdn.net/v/t1.0-9/52663202_2241745015888749_4736947738887847936_n.png?_nc_cat=106&_nc_ht=scontent.fgye1-1.fna&oh=22bac389e346dc25fcecdc75ec331f24&oe=5CDC906F)  ![](https://imag.malavida.com/mvimgbig/download-s/gedit-7071-0.jpg)
 
 ![es](https://dd-cdn.multiscreensite.com/flags/flags_iso/32/es.png)
 
