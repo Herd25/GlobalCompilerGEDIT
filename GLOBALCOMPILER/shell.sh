@@ -87,8 +87,8 @@ case ${type} in
 						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar ${name}  con los $flags ?" --ok-label="SI" --cancel-label="NO"
 						if [ $? == 0 ]; then
 						    cd "$dir"
-							g++ -c ${name} ${flags}
-							g++ -o out ${name}
+							#g++ -c ${name} ${flags}
+							g++ -o out ${name} ${flags}
 							echo "RUN C++ CODE"
 							./out
 							echo " "
@@ -147,8 +147,8 @@ case ${type} in
 							zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $file con los $flags ?" --ok-label="SI" --cancel-label="NO"
 							if [ $? == 0 ]; then
 							    cd "$dir"
-								g++ -c ${name} ${flags}
-								g++ -o $file ${name}
+								#g++ -c ${name} ${flags}
+								g++ -o $file ${name} ${flags}
 								echo "RUN C++ CODE"
 								./$file
 								$SHELL
@@ -222,8 +222,8 @@ case ${type} in
 						zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar ${name}  con los $flags ?" --ok-label="SI" --cancel-label="NO"
 						if [ $? == 0 ]; then
 						    cd "$dir"
-							cc -c ${name} ${flags}
-							cc -o out ${name}
+							#cc -c ${name} ${flags}
+							cc -o out ${name} ${flags}
 							echo "RUN C CODE"
 							./out
 							$SHELL
@@ -282,8 +282,8 @@ case ${type} in
 							zenity --question --window-icon="icon/compiler_icon.png" --title="CONFIRMACION" --text="Desea Compilar $file  con los $flags ?" --ok-label="SI" --cancel-label="NO"
 							if [ $? == 0 ]; then
 							    cd "$dir"
-								cc -c ${name} ${flags}
-								cc -o $file ${name}
+								#cc -c ${name} ${flags}
+								cc -o $file ${name} ${flags}
 								echo "RUN C CODE"
 								./$file
 								$SHELL
